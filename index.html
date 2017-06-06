@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Majestic Caravans | Live the Majestic Life</title>
+<meta name="description" content="Majestic Caravans provide top quality caravan sales Australia wide. All Majestic caravans for sale at backed with over 20 years of industry experience."/>
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Majestic Caravans Australia | Caravans For Sale | Off Road Caravans" />
+<meta property="og:description" content="Majestic Caravans provide top quality caravan sales Australia wide. All Majestic caravans for sale at backed with over 20 years of industry experience." />
+<meta property="og:site_name" content="Majestic Caravans" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900i' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<link rel="stylesheet" href="assets/animations.css">
+<link rel="stylesheet" href="assets/w3.css">
+<link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+
+<style>
+
+body{
+  background: #c42580;
+  color:#fff;
+}
+
+h1{
+  font-family:lato;
+  color:#fff;
+  font-weight: 900;
+  font-style: italic;
+  font-size:50px;
+  text-align:center;
+  text-transform:uppercase;
+}
+
+h2{
+  font-family:lato;
+  color:#fff;
+  margin-top:20px;
+  font-weight: 900;
+  font-style: italic;
+  font-size:30px;
+  text-align:center;
+  text-transform:uppercase;
+}
+
+h3{
+  font-family:lato;
+  color:#fff;
+  margin-top:10px;
+  font-weight: 900;
+  font-style: italic;
+  font-size:24px;
+  text-align:center;
+  text-transform:uppercase;
+}
+
+p{
+  font-family:lato;
+  color:#fff;
+  font-weight: 400;
+  font-size:18px;
+  text-align:center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family:lato;
+}
+
+/* CARAVAN ZOOM */
+/* This is the css for zooming in on the caravan image */
+.item {
+  position: relative; 
+  border: 0px;
+  margin: 2%;
+}
+
+.item img {
+  max-width: 100%;
+  
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.item:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* MOUNTAINS BIG */
+/* This is the css for the big mountain background animation */
+@keyframes animatedMountainBig {
+  from { background-position: 0 0px; }
+  to { background-position: 100% 0px; }
+}
+
+/* apply it to an element with the big mountain background image */
+#animate-mountain-big { 
+  width: 100%; 
+  height: 100%; 
+  background-image: url(assets/mountain-big.png);
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: animatedMountainBig 50s linear infinite;
+}
+
+/* MOUNTAINS SMALL */
+/* This is the css for the small mountain background animation */
+@keyframes animatedMountainSmall {
+  from { background-position: 100% 200px; }
+  to { background-position: 0 200px; }
+}
+
+/* apply it to an element with the small mountain background image */
+#animate-mountain-small { 
+  width: 100%; 
+  height: 100%; 
+  background-image: url(assets/mountain-small.png);
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: animatedMountainSmall 20s linear infinite;
+}
+
+/* FOREST PURPLE */
+/* This is the css for the purple forest background animation */
+@keyframes animatedForestPurple {
+  from { background-position: 0 250px; }
+  to { background-position: 100% 250px; }
+}
+
+/* apply it to an element with the purple forest background image */
+#animate-forest-purple { 
+  width: 100%; 
+  height: 100%; 
+  background-image: url(assets/forest-purple.png);
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  animation: animatedForestPurple 20s linear infinite;
+}
+
+/* FOREST MAGENTA */
+/* This is the css for the magenta forest background animation */
+@keyframes animatedForestMagenta {
+  from { background-position: 100% 350px; }
+  to { background-position: 0 350px; }
+}
+
+/* apply it to an element with the magenta forest background image */
+#animate-forest-magenta { 
+  width: 100%; 
+  height: 400%; 
+  background-image: url(assets/forest-magenta.png);
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  animation: animatedForestMagenta 40s linear infinite;
+}
+
+.section {
+  text-align: center!important;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.content-container {
+  width: 90%;
+  max-width: 800px;
+  margin-bottom: 40px;
+  padding: 3%;
+  color: #fff;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#grad {
+    background: #c42580; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#4b0b49, #c42580); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#4b0b49, #c42580); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#4b0b49, #c42580); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#4b0b49, #c42580); /* Standard syntax */
+}
+
+.rcorners {
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);    
+}
+
+.purple-button {
+    background-color: #781d7e;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    margin: 20px 20px;
+    cursor: pointer;
+    border-radius: 25px; 
+}
+
+#pop-up-message{
+  visibility: hidden;
+}
+
+#contact-details{
+  visibility: hidden;
+}
+
+.contact-us {max-width: 800px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3%;
+  }
+
+</style>
+</head>
+
+<body>
+
+<!-- START ANIMATION SECTION -->
+
+<div id="grad" class="w3-container" style="padding: 0">
+  <div id="animate-mountain-big" class="w3-mobile">
+    <div id="animate-mountain-small" class="w3-mobile">
+      <div id="animate-forest-purple" class="w3-mobile">
+        <div id="animate-forest-magenta" class="w3-mobile">
+
+          <div class="section">
+            <div id="logo" class="slideLeft"><img class="w3-mobile" src="assets/majestic-logo.png" alt="Majestic Caravans" style="padding: 0.01em 16px;"></div>
+            <h2 id="tagline" class="slideRight">LIVE THE MAJESTIC LIFE</h2>
+          </div>
+
+          <div class="section">
+            <div id="van" class="fadeIn"><img class="w3-mobile" src="assets/maj-van-knight.png" alt="Car" style="width:60%"></div>
+          </div>
+
+        </div>         
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- START COMING SOON SECTION -->
+          <div class="section" style="margin-top: -20px; margin-bottom: 50px">
+            <h2 class="slideLeft w3-mobile">NEW WEBSITE COMING SOON</h2>
+            <p class="w3-mobile">Our new website is currently in development and will be up and running shortly</p>
+          </div>
+
+
+<!-- START BRISBANE SHOW SECTION -->
+
+              <div id="pop-up-message" class="content-container rcorners">
+                <h1 class="w3-mobile">It's Showtime</h1>
+                <h2>Queensland Caravan Camping & Touring Supershow</h2>
+                <h3><br/>Brisbane Showgrounds, June 7 to June 12 2017</h3>
+                <p style="margin-top: 30px">Come and see us at site 2421 at the show. Majestic is excited to announce a fantastic <u>show special</u>. Show customers will receive a free upgrade to an Aluminium Composite Exterior, plus vehicle components and a GT Susupension upgrade on the Majestic Knight 19'6 SLE. We look forward to seeing you all at the show. If you have any further queries, please <a href="mailto:glen@majesticcaravans.com.au">contact us</a>.</p>
+                <div class="purple-button"><a style="text-decoration: none" href="assets/brochure.pdf" target="_blank">Get Brochure</a></div>
+              </div>    
+
+            <div id="contact-details" class="content-container rcorners">
+                
+                <h2>CONTACT US </h2>
+
+              <div class="rcorners" style="padding: 3%">
+                <h3 style="margin-top: 0px">QUEENSLAND</h3>
+                <p>37 Learjet Drive<br/>
+                   Caboolture QLD 4510<br/>
+                   <a href="mailto:glen@majesticcaravans.com.au">EMAIL US</a><br/>
+                   (07) 5499 1002<br/>
+                   Mon to Fri 9am-4pm<br/>
+                   Sat 9am-1pm
+                </p>
+              </div>
+
+              <!-- <div style="width: 40px; display: inline-block; padding: 3%">&nbsp;</div> -->             
+
+              <div class="rcorners" style="padding: 3%; margin-top: 40px">
+                <h3 style="margin-top: 0px">VICTORIA</h3>
+                <p>161 Melbourne Road<br/>
+                   Geelong North VIC 3215<br/>
+                   <a href="mailto:clint@majesticcaravans.com.au">EMAIL US</a><br/>
+                   (03) 5277 1292<br/>
+                   Mon to Fri 9am-4pm<br/>
+                   Sat 9am-1pm
+                </p>
+              </div>
+            </div> 
+
+            
+
+          <!-- <div style="clear: both" />
+
+          <div id="contact-details">
+
+              <div class="w3-container w3-cell rcorners">
+                <p>QUEENSLAND</p>
+              </div>
+
+              <div class="w3-container w3-cell rcorners">
+                <p>VICTORIA</p>
+              </div>
+          </div> -->
+
+<!-- START SOCIAL SECTION -->
+              <div style="margin-top: 50px" class="section" style="margin-bottom: 30px">
+                <div><img src="assets/crown-white.png"></div>
+                <div style="margin-bottom: 30px"><h2>Follow Majestic</h2></div>
+                <div><a href="https://www.facebook.com/majesticcaravansau/" target="_blank"><img src="assets/social-white.png"></a></div>
+              </div>          
+
+
+<!-- START COPYRIGHT SECTION -->
+              <div class="section" style="margin-bottom: 30px">
+                <p>&copy; Copyright Majestic Caravans 2017</p>
+                </div>
+
+
+<!-- START SCRIPTS -->
+              <script>
+
+    $(window).scroll(function() {
+      $('#pop-up-message').each(function(){
+      var imagePos = $(this).offset().top;
+      
+      var topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow+800) {
+          $(this).addClass("slideLeft");
+        }
+      });   
+
+      $('#contact-details').each(function(){
+      var imagePos = $(this).offset().top;
+      
+      var topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow+800) {
+          $(this).addClass("slideRight");
+        }
+      });                      
+
+    });
+
+              </script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64854311-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+              
+
+</body>
+</html>
+
+
+
+
+
+
+
